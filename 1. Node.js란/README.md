@@ -108,20 +108,6 @@ Node.js가 Chrome의 javascript 해석 엔진인 `V8`로 시작했음을 언급�
 - 소스 코드 -(파싱)→ 바이트코드(라고 표현, 외부적으로 사용하지 않음) → 인터프리터(Ignition)/JIT(TurboFan) → 네이티브 기계어 최적화
 - V8 엔진이 특정 아키텍처에 맞춰 빌드되고, 네이티브 기계어가 플랫폼별로 생성되므로 플랫폼 종속적임
 
-# 6. REPL(Read-Eval-Print-Loop)
-
-- Node.js를 설치하면 기본적으로 제공되는 콘솔 환경. javascript 코드를 읽어서 평가하고 코드의 실행(V8 엔진이) 결과를 출력해주는 것을 반복해주는 환경이다.
-
-# 7. libuv
-
-[libuv 공식문서](https://libuv.org/)
-
-- 이벤트 루프를 기반으로 하는 비동기 I/O에 대한 지원을 제공하는 다중 플랫폼 C 라이브러리
-- OS 플랫폼을 추상화해주기 때문에 window, unix 계열의 환경에서 동일한 코드로 작업을 할 수 있음
-- Node.js 환경에서의 `Event Loop`를 제공하여 비동기 처리를 가능하게 함
-  - 기본적으로 Thread pool에서 4개의 Thread를 제공함
-  - `File System` 작업의 경우 Thread pool에서 처리하고, `Network` 작업의 경우 OS에게 요청하여 처리함
-
 ---
 
 ### 참고자료
